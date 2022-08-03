@@ -2,7 +2,9 @@ sudo: required
 language: generic
 services:
   - docker
-
+branches:
+  only:
+    - master
 before_install:
   - docker build -t shannenleong/docker-react -f Dockerfile.dev .
 
